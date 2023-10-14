@@ -5,7 +5,9 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
 import Lines from "./components/Lines";
-
+import Form from "./components/Form";
+import Achievements from "./components/Achievements";
+import Experiences from "./components/Experiences";
 
 export default function Main() {
   const hiddenRef = useRef();
@@ -17,6 +19,9 @@ export default function Main() {
       <Navbar hiddenRef={hiddenRef}/>
       <Home/>
       <Projects hiddenRef={hiddenRef}/>
+      <Achievements/>
+      <Experiences/>
+      <Form/>
       </div>
       </div>
       </>

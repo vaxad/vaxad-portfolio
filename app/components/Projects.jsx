@@ -68,12 +68,12 @@ const Projects = ({ hiddenRef }) => {
 
 
   useEffect(() => {
-    if (page === 0) {
+    if (page <= 0) {
       document.getElementById("pbtn").style.color = "#656565";
     } else {
       document.getElementById("pbtn").style.color = "#ffffff";
     }
-    if (page === projects.length - 1) {
+    if (page >= projects.length - 1) {
       document.getElementById("nbtn").style.color = "#656565";
     } else {
       document.getElementById("nbtn").style.color = "#ffffff";
@@ -89,12 +89,12 @@ const Projects = ({ hiddenRef }) => {
   }
 
   useEffect(() => {
-    if (apage === 0) {
+    if (apage <= 0) {
       document.getElementById("apbtn").style.color = "#656565";
     } else {
       document.getElementById("apbtn").style.color = "#ffffff";
     }
-    if (apage === appProjects.length - 1) {
+    if (apage >= appProjects.length - 1) {
       document.getElementById("anbtn").style.color = "#656565";
     } else {
       document.getElementById("anbtn").style.color = "#ffffff";
@@ -110,12 +110,12 @@ const Projects = ({ hiddenRef }) => {
   }
 
   useEffect(() => {
-    if (spage === 0) {
+    if (spage <= 0) {
       document.getElementById("spbtn").style.color = "#656565";
     } else {
       document.getElementById("spbtn").style.color = "#ffffff";
     }
-    if (spage === sprojects.length - 1) {
+    if (spage >= sprojects.length - 1) {
       document.getElementById("snbtn").style.color = "#656565";
     } else {
       document.getElementById("snbtn").style.color = "#ffffff";
@@ -247,7 +247,7 @@ return (
 
       {/* for server */}
 
-      <div className=' mb-24'>
+      <div className=''>
         <Swiper
           modules={[Virtual]}
           spaceBetween={50}
@@ -299,7 +299,6 @@ return (
           </div>
         </div>
       </div>
-    <Form/>
     </section>
   </div>
 

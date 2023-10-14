@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react'
 const Navbar = ({hiddenRef}) => {
 
   useEffect(() => {
-        
+    
     window.addEventListener('scroll', scrollHandler);
  
     return () => window.removeEventListener('scroll', scrollHandler);
@@ -21,31 +21,63 @@ const openMenu=()=>{
 }
 
 const scrollHandler = () => {
-    if(window.scrollY + window.innerHeight - hiddenRef.current.offsetTop>=2150){
-      document.getElementById("contactNav").style.color = "#747bff";
+  // console.log(window.scrollY + window.innerHeight - hiddenRef.current.offsetTop)
+  if(window.scrollY + window.innerHeight - hiddenRef.current.offsetTop>=3550){
+    document.getElementById("contactNav").style.color = "#747bff";
+      document.getElementById("projNav").style.color = "#ffffff";
+      document.getElementById("achNav").style.color = "#ffffff";
+      document.getElementById("expNav").style.color = "#ffffff";
+      document.getElementById("homeNav").style.color = "#ffffff";
+  }else if(window.scrollY + window.innerHeight - hiddenRef.current.offsetTop>=2900){
+    document.getElementById("contactNav").style.color = "#ffffff";
+      document.getElementById("projNav").style.color = "#ffffff";
+      document.getElementById("achNav").style.color = "#ffffff";
+      document.getElementById("expNav").style.color = "#747bff";
+      document.getElementById("homeNav").style.color = "#ffffff";
+  }else if(window.scrollY + window.innerHeight - hiddenRef.current.offsetTop>=2150){
+      document.getElementById("contactNav").style.color = "#ffffff";
         document.getElementById("projNav").style.color = "#ffffff";
+        document.getElementById("achNav").style.color = "#747bff";
+        document.getElementById("expNav").style.color = "#ffffff";
         document.getElementById("homeNav").style.color = "#ffffff";
         }else if(window.scrollY + window.innerHeight - hiddenRef.current.offsetTop>=400){
       document.getElementById("contactNav").style.color = "#ffffff";
         document.getElementById("projNav").style.color = "#747bff";
+        document.getElementById("achNav").style.color = "#ffffff";
+        document.getElementById("expNav").style.color = "#ffffff";
         document.getElementById("homeNav").style.color = "#ffffff";
         }else{
           document.getElementById("contactNav").style.color = "#ffffff";
           document.getElementById("projNav").style.color = "#ffffff";
+          document.getElementById("achNav").style.color = "#ffffff";
+          document.getElementById("expNav").style.color = "#ffffff";
         document.getElementById("homeNav").style.color = "#747bff";
         }
     
 }
   
   const scroll = () => {
+    openMenu()
     const section = document.querySelector( '#projects' );
     section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
   };
   const scrollBack = () => {
+    openMenu()
     const section = document.querySelector( '#home' );
     section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
   };
+  const scrollAch = () => {
+    openMenu()
+    const section = document.querySelector( '#achievements' );
+    section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+  };
+  const scrollExp = () => {
+    openMenu()
+    const section = document.querySelector( '#experiences' );
+    section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+  };
   const scrollForm = () => {
+    openMenu()
     const section = document.querySelector( '#form' );
     section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
   };
@@ -75,6 +107,12 @@ const scrollHandler = () => {
       </li>
       <li>
         <a onClick={()=>{scroll()}} className="trans block py-2 pl-3 pr-4 rounded md:p-0 md:hover:text-blue-500 text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700" style={{backgroundColor:'#000000'}} id="projNav">Projects</a>
+      </li>
+      <li>
+        <a onClick={()=>{scrollAch()}} className="trans block py-2 pl-3 pr-4 rounded md:p-0 md:hover:text-blue-500 text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700" style={{backgroundColor:'#000000'}} id="achNav">Achievements</a>
+      </li>
+      <li>
+        <a onClick={()=>{scrollExp()}} className="trans block py-2 pl-3 pr-4 rounded md:p-0 md:hover:text-blue-500 text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700" style={{backgroundColor:'#000000'}} id="expNav">Experiences</a>
       </li>
       <li>
         {/* <a href="https://mail.google.com/mail/u/0/?fs=1&to=prabhuvrd@gmail.com&su=&body=&bcc=&tf=cm" target='_blank' className="trans block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 " style={{backgroundColor:'#000000'}}>Contact</a> */}

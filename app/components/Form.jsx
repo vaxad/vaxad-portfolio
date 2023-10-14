@@ -23,7 +23,7 @@ export default function Form() {
     }
 
     return (
-        <div id='form' className=' flex flex-col justify-center items-center w-full bg-slate-950 p-5 rounded-xl max-w-full' style={{opacity:0.85}}>
+        <div id='form' className=' flex flex-col justify-center items-center my-16 w-full bg-slate-950 p-5 rounded-xl max-w-full' style={{opacity:0.85}}>
             <form onSubmit={(e)=>{e.preventDefault();
                 handleSubmit()}} className=' flex flex-col justify-center items-center w-full gap-4'>
                 <h2>Contact me</h2>
