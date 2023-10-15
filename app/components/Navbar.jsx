@@ -22,7 +22,7 @@ const openMenu=()=>{
 
 const scrollHandler = () => {
   // console.log(window.scrollY + window.innerHeight - hiddenRef.current.offsetTop)
-  if(window.scrollY + window.innerHeight - hiddenRef.current.offsetTop>=3550){
+  if(window.scrollY + window.innerHeight - hiddenRef.current.offsetTop>=3700){
     document.getElementById("contactNav").style.color = "#747bff";
       document.getElementById("projNav").style.color = "#ffffff";
       document.getElementById("achNav").style.color = "#ffffff";
