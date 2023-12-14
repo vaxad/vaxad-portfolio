@@ -71,7 +71,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  /* color: #535bf2; */
 }
 
 body {
@@ -147,9 +147,9 @@ h1 {
   z-index: 5;
 }
 .card{
-  
+  background-color: #234cd5;
   background: var(--blue-gradient);
-  background-image: linear-gradient(to right, #6a25e100, #b340e400, #a246e0, #832bb6);
+  background-image: linear-gradient(to right, #234cd5, #234cd5, #a246e0, #832bb6);
   color: #fff;
   cursor: pointer;
   background-size: 400% 200%;

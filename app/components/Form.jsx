@@ -36,7 +36,7 @@ export default function Form() {
                 <textarea id="message" value={message} onChange={(e)=>{setMessage(e.target.value)}}  rows="4" required className="block p-2.5 w-full text-sm  rounded-lg border  bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Leave a comment..."></textarea>
                 </div>
             <div className='py-5'>
-            <button type="submit" className="card  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{clicked?'Message sent!':'Send message'}</button>
+            <button type="submit" className="card  text-white  focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800">{clicked?'Message sent!':'Send message'}</button>
             </div>
             </form>
         </div>

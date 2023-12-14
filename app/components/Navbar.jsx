@@ -91,7 +91,7 @@ const scrollHandler = () => {
   </a>
   <div className="flex md:order-2">
   <a href = "/varad_resume.pdf" download = "Varad's Resume">
-      <button type="button" className="card text-white  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 lg:font-medium  rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600  dark:focus:ring-blue-800">Get Resume</button>
+      <button type="button" className="card text-white  hover:bg-blue-800 focus:ring-4 focus:outline-none  lg:font-medium  rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 bg-blue-600  focus:ring-blue-800">Get Resume</button>
       </a>
       <button data-collapse-toggle="navbar-sticky" onClick={openMenu}  className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm  rounded-lg lg:hidden focus:outline-none focus:ring-2  text-gray-400 hover:bg-gray-700 focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="true">
         <span className="sr-only">Open main menu</span>
