@@ -10,7 +10,8 @@ export default function Achievements() {
       const res = await fetch('/api/achievements')
       const data = await res.json()
       console.log(data)
-      setachievements(data.achievements)
+      const sorted = data.achievements.sort((a, b) => parseFloat(b.order) - parseFloat(a.order))
+      setachievements(sorted)
       }
       getdata()
     }, [])

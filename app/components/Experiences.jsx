@@ -12,7 +12,8 @@ export default function Experiences() {
       const res = await fetch('/api/experiences')
       const data = await res.json()
       console.log(data)
-      setexperiences(data.experiences)
+      const sorted = data.experiences.sort((a, b) => parseFloat(b.order) - parseFloat(a.order))
+      setexperiences(sorted)
       }
       getdata()
     }, [])
